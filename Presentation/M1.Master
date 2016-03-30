@@ -1,0 +1,269 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="M1.master.cs" Inherits="Presentation.M1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+        <style type="text/css">
+        .h1 {
+            text-align: center;
+        }
+
+                .b3CurPage {
+            display: inline-block;
+  background-color:red;
+  border: 2px;
+  border-color: red;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  padding: 2px;
+  width: 25px;
+  transition: all 0.5s;
+  cursor: pointer;
+  /*margin: 5px;*/
+  border-radius: 50px;
+        } 
+
+        .b3 {
+            display: inline-block;
+  background-color:gainsboro;
+  border: 2px;
+  border-color: red;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  padding: 2px;
+  width: 25px;
+  transition: all 0.5s;
+  cursor: pointer;
+  /*margin: 5px;*/
+  border-radius: 50px;
+        }
+
+
+        .b3:hover {
+            background-color: #f4511e;
+            color: white;
+        }
+
+        .button {
+  display: inline-block;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 2px;
+  width: 110px;
+  transition: all 0.5s;
+  cursor: pointer;
+  /*margin: 5px;*/
+  border-radius: 11px;
+        }
+        
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+        .button span:after {
+  content: '«';
+  position:absolute;
+  opacity: 0;
+  top: 0;
+  /*right: -20px;*/
+            left: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-left: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+.button2 {
+  display: inline-block;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 2px;
+  width: 110px;
+  transition: all 0.5s;
+  cursor: pointer;
+  /*margin: 5px;*/
+  border-radius: 11px;
+        }
+        
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+        .button2 span:after {
+  content: '»';
+  position:absolute;
+  opacity: 0;
+  top: 0;
+  /*right: -20px;*/
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.hdr {
+    font-family: "B Titr";
+    font-size: 25px;
+    text-align: right;
+    margin: 50px;
+    }
+.txt {
+    font-family: "B Nazanin";
+    font-size: 22px;
+    font-weight: bold;
+    margin: 100px;
+    text-align: right;
+}
+    </style>
+</head>
+<body>
+    <form id="form2" runat="server">
+    <div>
+    <table style="width: 100%; height: 35px">
+        <tr>
+            <td style="width: 33%">
+                <button class="button" style="vertical-align:middle" onclick="PrevPage(); return false"><span style="font-family: 'B Homa'">صفحه قبل </span></button>
+            </td>
+            <td style="width: 34%; font-family: 'B Homa'; font-size: medium;" class="h1">رابطه انعطاف پذیری مالی و سیاست های مالی</td>
+            <td style="width: 33%; text-align: right;" >
+                <button class="button2" style="vertical-align:middle" onclick="NextPage(); return false;"><span style="font-family: 'B Homa'">صفحه بعد </span></button>
+            </td>
+        </tr>
+    </table>
+    <hr style="border-color: red; margin: 0px"/>
+    </div>
+        <div>
+            <table style="height: 20px; width: 100%">
+        <tr>
+            <td style="text-align: center">
+                <input type="button" id="btn1" value="1" class="b3" onclick="GoToPage(this.value)"/>    
+                <input type="button" id="btn2" value="2" class="b3" onclick="GoToPage(this.value)"/>        
+                <input type="button" id="btn3" value="3" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn4" value="4" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn5" value="5" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn6" value="6" class="b3" onclick="GoToPage(this.value)"/>    
+                <input type="button" id="btn7" value="7" class="b3" onclick="GoToPage(this.value)"/>        
+                <input type="button" id="btn8" value="8" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn9" value="9" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn10" value="10" class="b3" onclick="GoToPage(this.value)"/>  
+                <input type="button" id="btn11" value="11" class="b3" onclick="GoToPage(this.value)"/>    
+                <input type="button" id="btn12" value="12" class="b3" onclick="GoToPage(this.value)"/>        
+                <input type="button" id="btn13" value="13" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn14" value="14" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn15" value="15" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn16" value="16" class="b3" onclick="GoToPage(this.value)"/>    
+                <input type="button" id="btn17" value="17" class="b3" onclick="GoToPage(this.value)"/>        
+                <input type="button" id="btn18" value="18" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn19" value="19" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn20" value="20" class="b3" onclick="GoToPage(this.value)"/>   
+                <input type="button" id="btn21" value="21" class="b3" onclick="GoToPage(this.value)"/>    
+                <input type="button" id="btn22" value="22" class="b3" onclick="GoToPage(this.value)"/>        
+                <input type="button" id="btn23" value="23" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn24" value="24" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn25" value="25" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn26" value="26" class="b3" onclick="GoToPage(this.value)"/>    
+                <input type="button" id="btn27" value="27" class="b3" onclick="GoToPage(this.value)"/>        
+                <input type="button" id="btn28" value="28" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn29" value="29" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn30" value="30" class="b3" onclick="GoToPage(this.value)"/>  
+                <input type="button" id="btn31" value="31" class="b3" onclick="GoToPage(this.value)"/>    
+                <input type="button" id="btn32" value="32" class="b3" onclick="GoToPage(this.value)"/>        
+                <input type="button" id="btn33" value="33" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn34" value="34" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn35" value="35" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn36" value="36" class="b3" onclick="GoToPage(this.value)"/>    
+                <input type="button" id="btn37" value="37" class="b3" onclick="GoToPage(this.value)"/>        
+                <input type="button" id="btn38" value="38" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn39" value="39" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn40" value="40" class="b3" onclick="GoToPage(this.value)"/>  
+                <input type="button" id="btn41" value="41" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn42" value="42" class="b3" onclick="GoToPage(this.value)"/>
+                <input type="button" id="btn43" value="43" class="b3" onclick="GoToPage(this.value)"/> 
+            </td>
+        </tr>
+            </table>
+            <asp:ContentPlaceHolder ID="CPH1" runat="server">
+        </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+        <script language="javascript">
+            
+            try {
+                
+                for (var i = 1; i < 44; i++) {
+                    x = "btn" + i;
+                    
+                    if (document.getElementById(x).value == page) {
+                        document.getElementById(x).className = "b3CurPage";
+                    } else {
+                        
+                    }
+                }
+            } catch (e) {
+                alert(e);
+            }
+
+            function NextPage() {
+                try {
+                    if (page == 43) {
+                        window.location.href = "FinalPage.aspx";
+                    } else {
+                        var x = page + 1;
+                        var y = "Page" + x + ".aspx";
+                        window.location.href = y;
+                    }
+                } catch (e) {
+
+                } 
+                
+            }
+
+            function PrevPage() {
+                try {
+                    if (page == 1) {
+                        window.location.href = "Default.aspx";
+                    } else {
+                        var x = page - 1;
+                        var y = "Page" + x + ".aspx";
+                        window.location.href = y;
+                    }
+                } catch (e) {
+                    
+                } 
+                
+            }
+
+            function GoToPage(x) {
+                var y = "Page" + x+".aspx";
+                window.location.href = y;
+            }
+    </script>
+</html>
